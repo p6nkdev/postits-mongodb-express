@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const postits = document.getElementsByClassName('sent');
         for (const postit of postits) {
             const text = postit.textContent.toLowerCase();
-            postit.style.display = text.includes(filter) ? 'block' : 'none';
+            postit.style.display = text.includes(filter) ? 'flex' : 'none';
         }
     });
 });
