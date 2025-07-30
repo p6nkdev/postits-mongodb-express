@@ -42,9 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // funcionalidade de pesquisa
     const searchInput = document.getElementById('search');
-    searchInput.addEventListener('input', () => {
+    searchInput.addEventListener('keyup', () => {
         const filter = searchInput.value.toLowerCase();
-        const postits = document.querySelectorAll('.postit');
+        const postits = document.getElementsByClassName('sent');
         postits.forEach(postit => {
             const text = postit.textContent.toLowerCase();
             postit.style.display = text.includes(filter) ? 'block' : 'none';
