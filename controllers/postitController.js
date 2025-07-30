@@ -20,7 +20,7 @@ async function createPostit(req, res) {
 
     try {
         await Postit.create({ nome, descricao, color, avaliacao });
-        res.render('obrigado', { nome });
+        res.redirect('/obrigado');
     } catch (error) {
         res.status(500).json({ message: 'Erro ao criar post-it', error });
     }
