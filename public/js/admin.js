@@ -45,9 +45,9 @@ document.addEventListener('DOMContentLoaded', () => {
     searchInput.addEventListener('keyup', () => {
         const filter = searchInput.value.toLowerCase();
         const postits = document.getElementsByClassName('sent');
-        postits.forEach(postit => {
+        for (const postit of postits) {
             const text = postit.textContent.toLowerCase();
             postit.style.display = text.includes(filter) ? 'block' : 'none';
-        });
+        }
     });
 });
