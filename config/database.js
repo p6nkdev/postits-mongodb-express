@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-require('dotenv').config({ path: '../.env', quiet: true });
+require('dotenv').config();
 
 // conectando ao banco de dados
 function connectDB() {
