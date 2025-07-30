@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Post-it</title>
+    <link type="text/css" rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body>
+    <form action="/postits" method="POST">
+        <h1>Formulário de Post-it</h1>
+        <label for="nome">Nome:</label>
+        <input maxlength="20" type="text" id="nome" name="nome" required>
+
+        <label for="descricao">Deixe seu recado:</label>
+        <textarea maxlength="150" id="descricao" name="descricao" required></textarea>
+
+        <label for="color">Cor do Post-it:</label>
+        <select id="color" name="color" value="none" required>
+            <option style="background-color: #ffffff;" selected disabled>Selecione a cor do seu Post-it</option>
+            <option style="background-color: #ff6961;" value="#ff6961">Vermelho</option>
+            <option style="background-color: #77dd77;" value="#77dd77">Verde</option>
+            <option style="background-color: #fdfd96;" value="#fdfd96">Amarelo</option>
+            <option style="background-color: #84b6f4;" value="#84b6f4">Azul</option>
+            <option style="background-color: #fdcae1;" value="#fdcae1">Rosa</option>
+        </select>
+
+        <label>Deixe sua avaliação:</label>
+        <div class="estrelas">
+            <input type="radio" name="avaliacao" id="estrela5" value="5"><label for="estrela5"></label>
+            <input type="radio" name="avaliacao" id="estrela4" value="4"><label for="estrela4"></label>
+            <input type="radio" name="avaliacao" id="estrela3" value="3"><label for="estrela3"></label>
+            <input type="radio" name="avaliacao" id="estrela2" value="2"><label for="estrela2"></label>
+            <input type="radio" name="avaliacao" id="estrela1" value="1"><label for="estrela1"></label>
+        </div>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script src="/js/form.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Post-it</title>
+    <link type="text/css" rel="stylesheet" href="/css/postits.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- ESTATISTICAS (CONTADORES) -->
+    <div class="estatisticas">
+        <div class="box">
+            <h2>Total de Post-its</h2>
+            <p id="totalPostits">0</p>
+        </div>
+        <div class="box">
+            <h2>Avaliação média</h2>
+            <p id="avaliacaoMedia">0</p>
+        </div>
+        <div class="box">
+            <h2>Total por cores</h2>
+            <div class="color-box">
+                <div class="color" style="background-color: #ff6961;">
+                    <p id="totalVermelho">0</p>
+                </div>
+                <div class="color" style="background-color: #77dd77;">
+                    <p id="totalVerde">0</p>
+                </div>
+                <div class="color" style="background-color: #fdfd96;">
+                    <p id="totalAmarelo">0</p>
+                </div>
+                <div class="color" style="background-color: #84b6f4;">
+                    <p id="totalAzul">0</p>
+                </div>
+                <div class="color" style="background-color: #fdcae1;">
+                    <p id="totalRosa">0</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- POST-ITS DINAMICAMENTE CRIADOS -->
+    <div class="postits-container" id="postItsContainer"></div>
+</body>
+
+<script src="/js/postits.js"></script>
+
+</html>
