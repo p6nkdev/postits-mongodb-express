@@ -48,7 +48,7 @@ async function updatePostits() {
     const postIts = await getAllPostits();
     await createPostits(postIts);
     document.getElementById('totalPostits').textContent = postIts.length;
-    document.getElementById('avaliacaoMedia').textContent = postIts.reduce((acc, pi) => acc + pi.avaliacao, 0) / postIts.length || 0;
+    document.getElementById('avaliacaoMedia').textContent = ((postIts.reduce((acc, pi) => acc + pi.avaliacao, 0) / postIts.length) || 0).toFixed(2);
     document.getElementById('totalVermelho').textContent = postIts.filter(pi => pi.color === '#ff6961').length;
     document.getElementById('totalVerde').textContent = postIts.filter(pi => pi.color === '#77dd77').length;
     document.getElementById('totalAmarelo').textContent = postIts.filter(pi => pi.color === '#fdfd96').length;
